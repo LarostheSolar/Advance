@@ -29,7 +29,7 @@ p{
   text-align:center;
 }
 
-div img{
+figure img{
     display:block;
     margin:auto;
     border: 5px solid #000;
@@ -37,14 +37,14 @@ div img{
     border-radius: 5%;
 }
 
-div{
+figure{
   display: inline-block;
   margin: 5px;
   padding: 2px;
   position: relative;
 }
 
-.alt{
+figcaption{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -54,42 +54,49 @@ div{
 }
 
 @media (min-width: 772px) {
-    div img{
-        width: 40vw;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    figure img {
+        width: 100%;
         border-radius: 50%;
     }
-    div img:last-child {
+    figure img:last-child {
         width: 100%;
         object-fit: cover;
     }
 }
 
 @media (min-width: 992px) {
-    div img{
-        width: 30vw;
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    figure img{
+        width: 100%;
         border-radius: 0;
     }
-     div img:nth-child(3n) {
+     figure img:nth-child(3n) {
         width: 100%;
         object-fit: cover;
     }
 }
 
 @media (prefers-color-scheme: dark){
-    div img{
+    figure img{
         border: 5px solid #000;
     }
-    .alt{
+    figcaption{
         background-color: #000;
         color: #fff;
     }
 }
 
 @media (prefers-color-scheme: light){
-    div img{
+    figure img{
         border: 5px solid #fff;
     }
-    .alt{
+    figcaption{
         background-color: #fff;
         color: #000;
     }
