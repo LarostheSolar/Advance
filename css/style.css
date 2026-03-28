@@ -25,14 +25,13 @@ p {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 img{
     width: 100%;
     height: 100%;
     display:block;
-    margin: 0;
-    border: 5px solid #000;
     border-radius: 5%;
 }
 
@@ -43,6 +42,7 @@ img{
     width: 100%;
     text-align: center;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 @media (min-width: 772px) {
@@ -82,6 +82,9 @@ img{
     div img{
         border: 5px solid #000;
     }
+    .container{
+        border:10px solid #000;
+    }
     .caption{
         background-color: #000;
         color: #fff;
@@ -92,7 +95,10 @@ img{
     div img{
         border: 5px solid #fff;
     }
-    .caption::after{
+    .container{
+        border:10px solid #fff;
+    }
+    .caption{
         background-color: #fff;
         color: #000;
     }
