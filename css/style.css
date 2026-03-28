@@ -43,21 +43,6 @@ div{
   padding: 2px;
 }
 
-@media (min-width: 772px) {
-    div {
-        width: 45vw;
-    }
-    img {
-        height: 30vh;
-    }
-}
-
-@media (min-width: 992px) {
-    div {
-        width: 30vw;
-    }
-}
-
  
 main {
     border: 5px #000 solid;
@@ -122,4 +107,19 @@ header {
  
 .child:hover .label {
     display: block;
+}
+
+@media (min-width: 772px) {
+    div {
+        width: 45vw;
+    }
+    img {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 992px) {
+    div {
+        width: 30vw;
+    }
 }
