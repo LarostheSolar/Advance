@@ -29,26 +29,23 @@ p{
   text-align:center;
 }
 
-figure img{
+div img{
     display:block;
     margin:auto;
     border: 5px solid #000;
     margin: 5px;
     border-radius: 5%;
+    position: relative;
 }
 
-figure{
-  display: inline-block;
-  margin: 5px;
-  padding: 2px;
-  position: relative;
-}
-
-figcaption{
+img::after {
+    content: attr(alt);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 10px;
 }
@@ -58,11 +55,14 @@ figcaption{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    figure img {
+    img {
         width: 100%;
         border-radius: 50%;
     }
-    figure img:last-child {
+    .grid img:last-child {
+        grid-column: 1 / -1;
+    }
+    .grid img:last-child {
         width: 100%;
         object-fit: cover;
     }
@@ -72,31 +72,34 @@ figcaption{
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    figure img{
+    img{
         width: 100%;
         border-radius: 0;
     }
-     figure img:nth-child(3n) {
+    .grid img:nth-child(3n) {
+        grid-column: 1 / -1;
+    }
+    .grid img:nth-child(3n) {
         width: 100%;
         object-fit: cover;
     }
 }
 
 @media (prefers-color-scheme: dark){
-    figure img{
+    div img{
         border: 5px solid #000;
     }
-    figcaption{
+    img::after{
         background-color: #000;
         color: #fff;
     }
 }
 
 @media (prefers-color-scheme: light){
-    figure img{
+    div img{
         border: 5px solid #fff;
     }
-    figcaption{
+    img::after{
         background-color: #fff;
         color: #000;
     }
