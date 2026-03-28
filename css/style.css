@@ -35,14 +35,6 @@ div img{
 
 div{
   display: inline-block;
-  margin: 5px;
-  padding: 2px;
-}
-
- 
-main {
-    border: 5px #000 solid;
-    margin: 10px;
 }
 
 .container {
